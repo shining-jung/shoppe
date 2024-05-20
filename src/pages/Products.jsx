@@ -25,7 +25,7 @@ const Products = () => {
     let products = productsState.products;
 
     const getThisItem = async () => {
-        let url = `http://localhost:5000/products/${id}`;
+        let url = `https://my-json-server.typicode.com/shining-jung/shoppe/products/${id}`;
         let response = await fetch(url);
         let data = await response.json();
         setItem(data);
@@ -40,6 +40,7 @@ const Products = () => {
             dispatch(getProductList(item.category));
         }
     }, [dispatch, item.category]);
+
     if (productsState.status !== "scucceeded") {
         return <main className="notPage mw">로딩중...</main>;
     }
