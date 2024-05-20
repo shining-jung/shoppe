@@ -1,0 +1,138 @@
+:root {
+    --cr-b1: #000;
+    --cr-b2: #272727;
+    --cr-w1: rgba(255, 255, 255, 1);
+    --cr-w2: rgba(255, 255, 255, 0.6);
+    --cr-w3: rgba(255, 255, 255, 0.5);
+    --cr-g1: #efefef;
+    --cr-g2: #d8d8d8;
+    --cr-br1: #a18a68;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.mw {
+    max-width: 124.8rem;
+    width: calc(100% - 2.4rem);
+    margin: 0 auto;
+}
+a {
+    color: var(--cr-b1);
+}
+h2 {
+    font-size: 3.3rem;
+    color: var(--cr-b1);
+    font-weight: 500;
+    padding: 6.1rem 0 3.9rem 0;
+}
+
+.App main {
+    min-height: calc(100vh - 12.2rem);
+    padding-bottom: 25rem;
+}
+
+.mainList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.mainList > a {
+    transform: translateY(2rem);
+}
+.shopall {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 3.5rem;
+}
+
+.shopall h2 {
+    width: 100%;
+}
+.shopall nav {
+    width: 26.2rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+.shopall nav button {
+    border: 1px solid #d8d8d8;
+    padding: 1.5rem 1.2rem;
+    width: 100%;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+    height: 5.3rem;
+    line-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.listCon {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 8.6rem 5.4rem;
+    padding-left: 0;
+}
+.shopall .listCon {
+    flex: 1;
+    gap: 7rem 2.4rem;
+}
+
+.cart h2 {
+    padding-bottom: 1rem;
+}
+.cart > p {
+    padding-bottom: 3.9rem;
+    color: var(--cr-b2);
+}
+.cartList {
+    padding: 0;
+}
+.cartList li {
+    display: flex;
+    border: 1px solid var(--cr-g2);
+    width: 100%;
+    padding: 1.8rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+}
+.cartList li.totalFee {
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+.cartList li.totalFee strong {
+    color: #8f0101;
+}
+
+.notPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
+}
+
+.notPage strong {
+    font-size: 6.4rem;
+}

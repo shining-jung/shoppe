@@ -1,0 +1,126 @@
+.header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 6.4rem 0 1.6rem 0;
+}
+
+.header h1 {
+    flex: 1;
+}
+.header h1 a {
+    max-width: 15.8rem;
+    display: block;
+}
+.header h1 a img {
+    width: 100%;
+}
+.header > nav,
+.header > div {
+    display: flex;
+}
+.header > nav {
+    display: flex;
+    align-items: center;
+}
+.header > nav a {
+    font-weight: 500;
+    padding: 1rem 2.2rem;
+    margin-left: 2rem;
+    color: var(--cr-b1);
+}
+.header > nav a:hover {
+    color: var(--cr-br1);
+}
+.header > nav::after {
+    content: "";
+    width: 1px;
+    height: 1.7rem;
+    display: block;
+    background: #707070;
+    margin: 0 4.8rem;
+    position: relative;
+}
+.header > div {
+    gap: 0.9rem;
+}
+.header > div > a {
+    padding: 1rem;
+}
+
+.ham {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .header {
+        padding: 2.8rem 0;
+    }
+    .header > nav,
+    .header > div {
+        display: none;
+    }
+
+    .ham {
+        display: block;
+    }
+    .ham::after {
+        content: "\f0c9";
+        font: var(--fa-font-solid);
+    }
+
+    .header.on > nav {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 99;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        padding-bottom: 10rem;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .header.on > nav::after {
+        display: none;
+    }
+    .header.on > nav a {
+        color: var(--cr-w1);
+    }
+    .header.on > div {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        z-index: 99;
+        width: 100%;
+        left: 0;
+        bottom: 50%;
+        transform: translateY(calc(50% + 5rem));
+    }
+    .header.on > div a img {
+        filter: invert();
+    }
+    .header.on > h1 {
+        position: fixed;
+        top: 2.8rem;
+        left: 2.4rem;
+        z-index: 999;
+    }
+    .header.on > h1 img {
+        filter: invert();
+    }
+    .header.on > .ham {
+        position: fixed;
+        top: 2.8rem;
+        right: 2.4rem;
+        z-index: 999;
+        color: var(--cr-w1);
+    }
+    .header.on > .ham::after {
+        content: "\58";
+        font: var(--fa-font-solid);
+    }
+}
